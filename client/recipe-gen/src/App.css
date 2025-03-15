@@ -1,7 +1,6 @@
-/* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
+  background-color: #282828;
   margin: 0;
   padding: 0;
 }
@@ -16,19 +15,27 @@ body {
 /* Card Styling */
 .card {
   width: 350px;
-  background-color: #ffffff;
+  background-color: #484848;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(50, 163, 255);
 }
 
 .card-title {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #333;
+  background: linear-gradient(to right, #72faff, #65ffc4, #5dff39, #65ffc4, #72faff);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 2.5s linear infinite;
 }
 
+/* Input Group Styling */
 .input-group {
   margin-bottom: 15px;
 }
@@ -36,7 +43,7 @@ body {
 .input-group label {
   display: block;
   font-size: 0.9rem;
-  color: #555;
+  color: #fff1f1;
   margin-bottom: 5px;
 }
 
@@ -50,18 +57,34 @@ body {
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
+  
+  /* Updated background and text color */
+  background-color: #555;
+  color: white;
+}
+
+.input-group input::placeholder,
+.input-group select option {
+  color: #ccc; /* Light gray for placeholder text */
 }
 
 .input-group input:focus,
 .input-group select:focus {
-  border-color: #4CAF50;
+  border-color: #00f2ff;
+}
+
+/* Error Message Styling */
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
 }
 
 /* Generate Button */
 .generate-btn {
   width: 100%;
   padding: 12px;
-  background-color: #4CAF50;
+  background-color: #212121;
   color: white;
   border: none;
   border-radius: 6px;
@@ -72,7 +95,7 @@ body {
 }
 
 .generate-btn:hover {
-  background-color: #45a049;
+  background-color: #05c5ff;
 }
 
 /* Recipe Output Styling */
@@ -80,12 +103,21 @@ body {
   width: 400px;
   height: 500px;
   overflow-y: auto;
-  background-color: #fafafa;
+  background-color: #484848;
   padding: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid #484848;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   font-size: 0.9rem;
-  color: #555;
+  color: #ffffff;
   white-space: pre-wrap;
+  border-width: 2px;
+  border-style: solid;
+  border-color: rgb(166, 50, 255);
+}
+
+/* Animation for Gradient Title */
+@keyframes animate-gradient {
+  to {
+    background-position: 200%;
+  }
 }

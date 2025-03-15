@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 
 const RecipeCard = ({ onSubmit }) => {
+
   const [ingredients, setIngredients] = useState("");
   const [mealType, setMealType] = useState("");
   const [cuisine, setCuisine] = useState("");
@@ -9,6 +10,12 @@ const RecipeCard = ({ onSubmit }) => {
   const [complexity, setComplexity] = useState("");
 
   const handleSubmit = () => {
+
+    // if (!ingredients || !mealType || !cuisine || !cookingTime || !complexity) {
+    //   alert("Please fill in all the fields before generating the recipe.");
+    //   return;
+    // }
+    
     const recipeData = {
       ingredients,
       mealType,
