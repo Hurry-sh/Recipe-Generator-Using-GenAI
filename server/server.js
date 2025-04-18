@@ -44,7 +44,7 @@ app.get("/recipeStream", async (req, res) => {
 });
 
 async function fetchGeminiCompletionsStream(prompt, callback) {
-  const GEMINI_API_KEY = "AIzaSyCdfp1-Lz1DnL0InSodwdMRqxZoOUOIqPo"; // Replace with actual API key
+  const GEMINI_API_KEY = ""; // Replace with actual API key
   const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
   const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest" });
 
