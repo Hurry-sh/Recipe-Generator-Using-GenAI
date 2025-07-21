@@ -18,5 +18,4 @@ forms everyday meal planning. Performance metrics indicate
  search-based approaches, with particular advantages for users
  with limited ingredient availability.
 
-Architecture Diagram:
 <img width="482" height="193" alt="image" src="https://github.com/user-attachments/assets/fa6fc31e-2aa5-44ff-9468-c7bacf6ff982" />
